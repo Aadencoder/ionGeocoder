@@ -140,6 +140,8 @@ export class HomePage {
           .then((data: any) => {
             this.geocoded = true;
             this.results = data;
+            console.log(this.results);
+            
 
           })
           .catch((error: any) => {
@@ -171,7 +173,7 @@ export class HomePage {
           .then((data: any) => {
             this.geocoded = true;
             this.results = data;
-
+            // console.log(this.results);
           })
           .catch((error: any) => {
             this.geocoded = true;

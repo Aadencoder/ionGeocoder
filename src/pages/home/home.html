@@ -72,7 +72,14 @@
       Conditionally display the geocoding results
    -->
   <section *ngIf="geocoded">
-    {{ results }}
+    <div *ngFor="let res of results" >
+      <div *ngIf="res.longitude">
+        The coordinates are latitude= {{res.latitude}}  and longitude= {{res.longitude}}<br>
+      </div>
+       <div *ngIf="res.locality">
+         The reverseGeocode address is {{res.locality}} in {{res.countryCode}}
+       </div>
+    </div>
   </section>
 
 </ion-content>
